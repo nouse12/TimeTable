@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="header">
+      <a href="/">Home</a>
+      <a href="/Lecture">Lecture</a>
+      <a href="/Lab">Lab</a>
+      <a href="/Tutorial">Tutorial</a>
+    </header>
+    <h1><%= title%></h1>
+    <table>
+      <tr>
+        <th class="one">Monday</th>
+        <th class="two">Tuesday</th>
+        <th class="three">Wednesday</th>
+        <th class="four">Thursday</th>
+        <th class="five">Friday</th>
+        <th class="six">Saturday</th>
+        <th class="seven">Sunday</th>
+      </tr>
+      <tr>
+        <td class="one">
+        <div class="display">
+          <% items[0].items.forEach(function(item){ %>
+            <form class="display-form" action="/delete" method="post">
+              <input type="checkbox" name="checkbox" value="<%= item._id %>" onChange="this.form.submit()">
+              <p class="pp"><%=item.name %></p>
+              <p><%=item.time%></p>
+              <p><%=item.inputCode %></p>
+              <p><%=item.password %></p>
+              <input type="hidden" name="listType" value="<%= title %>">
+              <input type="hidden" name="day" value="Monday">
+            </form>
+
+          <% }) %>
+
+        </div>
+        <div class="fill">
+          <form class="fill-form" action="/" method="post">
+            <input type="text" name="name" placeholder="Enter Subject"><br />
+            <input type="text" name="time" placeholder="Enter Time"><br>
+            <input type="text" name="inputCode" placeholder="Enter input code"><br>
+            <input type="text" name="password" placeholder="password"><br>
+            <input type="hidden" name="title" value="<%=title %>">
+
+            <div class="button">
+              <button type="submit" name="button" value="Monday">Add New</button>
+            </div>
+          </form>
+        </div>
+      </td>
+      <td class="two">
+        <div class="display">
+          <% items[1].items.forEach(function(item){ %>
+            <form class="display-form" action="/delete" method="post">
+              <input type="checkbox" name="checkbox" value="<%= item._id %>" onChange="this.form.submit()">
+              <p class="pp"><%=item.name %></p>
+              <p><%=item.time%></p>
+              <p><%=item.inputCode %></p>
+              <p><%=item.password %></p>
+              <input type="hidden" name="listType" value="<%= title %>">
+              <input type="hidden" name="day" value="Tuesday">
+            </form>
+
+          <% }) %>
+
+        </div>
+        <div class="fill">
+          <form class="fill-form" action="/" method="post">
+            <input type="text" name="name" placeholder="Enter Subject"><br />
+            <input type="text" name="time" placeholder="Enter Time"><br>
+            <input type="text" name="inputCode" placeholder="Enter input code"><br>
+            <input type="text" name="password" placeholder="password"><br>
+            <input type="hidden" name="title" value="<%=title %>">
+
+            <div class="button">
+              <button type="submit" name="button" value="Tuesday">Add New</button>
+            </div>
+          </form>
+        </div>
+      </td>
+      <td class="three">
+        <div class="display">
+          <% items[2].items.forEach(function(item){ %>
+            <form class="display-form" action="/delete" method="post">
+              <input type="checkbox" name="checkbox" value="<%= item._id %>" onChange="this.form.submit()">
+              <p class="pp"><%=item.name %></p>
+              <p><%=item.time%></p>
+              <p><%=item.inputCode %></p>
+              <p><%=item.password %></p>
+              <input type="hidden" name="listType" value="<%= title %>">
+              <input type="hidden" name="day" value="Wednesday">
+            </form>
+
+          <% }) %>
+
+        </div>
+        <div class="fill">
+          <form class="fill-form" action="/" method="post">
+            <input type="text" name="name" placeholder="Enter Subject"><br />
+            <input type="text" name="time" placeholder="Enter Time"><br>
+            <input type="text" name="inputCode" placeholder="Enter input code"><br>
+            <input type="text" name="password" placeholder="password"><br>
+            <input type="hidden" name="title" value="<%=title %>">
+
+            <div class="button">
+              <button type="submit" name="button" value="Wednesday">Add New</button>
+            </div>
+          </form>
+        </div>
+      </td>
+      <td class="four">
+        <div class="display">
+          <% items[3].items.forEach(function(item){ %>
+            <form class="display-form" action="/delete" method="post">
+              <input type="checkbox" name="checkbox" value="<%= item._id %>" onChange="this.form.submit()">
+              <p class="pp"><%=item.name %></p>
+              <p><%=item.time%></p>
+              <p><%=item.inputCode %></p>
+              <p><%=item.password %></p>
+              <input type="hidden" name="listType" value="<%= title %>">
+              <input type="hidden" name="day" value="Thursday">
+            </form>
+
+          <% }) %>
+
+        </div>
+        <div class="fill">
+          <form class="fill-form" action="/" method="post">
+            <input type="text" name="name" placeholder="Enter Subject"><br />
+            <input type="text" name="time" placeholder="Enter Time"><br>
+            <input type="text" name="inputCode" placeholder="Enter input code"><br>
+            <input type="text" name="password" placeholder="password"><br>
+            <input type="hidden" name="title" value="<%=title %>">
+
+            <div class="button">
+              <button type="submit" name="button" value="Thursday">Add New</button>
+            </div>
+          </form>
+        </div>
+      </td>
+      <td class="five">
+        <div class="display">
+          <% items[4].items.forEach(function(item){ %>
+            <form class="display-form" action="/delete" method="post">
+              <input type="checkbox" name="checkbox" value="<%= item._id %>" onChange="this.form.submit()">
+              <p class="pp"><%=item.name %></p>
+              <p><%=item.time%></p>
+              <p><%=item.inputCode %></p>
+              <p><%=item.password %></p>
+              <input type="hidden" name="listType" value="<%= title %>">
+              <input type="hidden" name="day" value="Friday">
+            </form>
+
+          <% }) %>
+
+        </div>
+        <div class="fill">
+          <form class="fill-form" action="/" method="post">
+            <input type="text" name="name" placeholder="Enter Subject"><br />
+            <input type="text" name="time" placeholder="Enter Time"><br>
+            <input type="text" name="inputCode" placeholder="Enter input code"><br>
+            <input type="text" name="password" placeholder="password"><br>
+            <input type="hidden" name="title" value="<%=title %>">
+
+            <div class="button">
+              <button type="submit" name="button" value="Friday">Add New</button>
+            </div>
+          </form>
+        </div>
+      </td>
+      <td class="six">
+        <div class="display">
+          <% items[5].items.forEach(function(item){ %>
+            <form class="display-form" action="/delete" method="post">
+              <input type="checkbox" name="checkbox" value="<%= item._id %>" onChange="this.form.submit()">
+              <p class="pp"><%=item.name %></p>
+              <p><%=item.time%></p>
+              <p><%=item.inputCode %></p>
+              <p><%=item.password %></p>
+              <input type="hidden" name="listType" value="<%= title %>">
+              <input type="hidden" name="day" value="Saturday">
+            </form>
+
+          <% }) %>
+
+        </div>
+        <div class="fill">
+          <form class="fill-form" action="/" method="post">
+            <input type="text" name="name" placeholder="Enter Subject"><br />
+            <input type="text" name="time" placeholder="Enter Time"><br>
+            <input type="text" name="inputCode" placeholder="Enter input code"><br>
+            <input type="text" name="password" placeholder="password"><br>
+            <input type="hidden" name="title" value="<%=title %>">
+
+            <div class="button">
+              <button type="submit" name="button" value="Saturday">Add New</button>
+            </div>
+          </form>
+        </div>
+      </td>
+      <td class="seven">
+        <div class="display">
+          <% items[6].items.forEach(function(item){ %>
+            <form class="display-form" action="/delete" method="post">
+              <input type="checkbox" name="checkbox" value="<%= item._id %>" onChange="this.form.submit()">
+              <p class="pp"><%=item.name %></p>
+              <p><%=item.time%></p>
+              <p><%=item.inputCode %></p>
+              <p><%=item.password %></p>
+              <input type="hidden" name="listType" value="<%= title %>">
+              <input type="hidden" name="day" value="Sunday">
+            </form>
+
+          <% }) %>
+
+        </div>
+        <div class="fill">
+          <form class="fill-form" action="/" method="post">
+            <input type="text" name="name" placeholder="Enter Subject"><br />
+            <input type="text" name="time" placeholder="Enter Time"><br>
+            <input type="text" name="inputCode" placeholder="Enter input code"><br>
+            <input type="text" name="password" placeholder="password"><br>
+            <input type="hidden" name="title" value="<%=title %>">
+            <div class="button">
+              <button type="submit" name="button" value="Sunday">Add New</button>
+            </div>
+          </form>
+        </div>
+      </td>
+    </tr>
+    </table>
+      <footer>Made by: Parth Naghera, DAIICT</footer>
+
+  </body>
+</html>
